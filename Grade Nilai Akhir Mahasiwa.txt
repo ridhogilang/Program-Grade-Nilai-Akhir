@@ -1,0 +1,41 @@
+print("======================Masukkan Data Anda======================")
+print(" ")
+nama = str(input("Masukkan Nama Mahasiswa     : "))
+NIM = str(input("Masukkan NIM                : "))
+Mata_Kuliah = str(input("Masukkan Mata Kuliah        : "))
+pres = int(input("Masukkan Jumlah Presensi    : "))
+tugas = int(input("Masukkan Nilai Tugas        : "))
+UTS = int(input("Masukkan Nilai UTS          : "))
+UAS = int(input("Masukkan Nilai UAS          : "))
+
+presensi = pres * 0.20
+nilai_tugas = tugas * 0.25
+nilai_UTS = UTS * 0.25
+nilai_UAS = UAS * 0.30
+nilaiakhir = presensi + nilai_tugas + nilai_UTS + nilai_UAS
+
+if nilaiakhir >= 96 :
+    grade = 'A'
+elif nilaiakhir >= 90 :
+    grade = '-A'
+elif nilaiakhir >= 85 :
+    grade = 'B+'
+elif nilaiakhir >= 75 :
+    grade = 'B'
+elif nilaiakhir >= 65 :
+    grade = 'C+'
+elif nilaiakhir >= 55 :
+    grade = 'C'
+elif nilaiakhir >= 35 :
+    grade = 'D'
+else :
+    grade = 'E'
+
+print(" ")
+print("==================Grade Nilai AKhir Mahasiswa==================")
+print(" ")
+print("Nama            : ",nama)
+print("NIM             : ",NIM)
+print("Mata Kuliah     : ",Mata_Kuliah)
+print("Nilai Akhir     : ",nilaiakhir)
+print("Grade           : ",grade)
